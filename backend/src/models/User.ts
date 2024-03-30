@@ -13,7 +13,7 @@ const UserSchema = new mongoose.Schema({
   name: {
     type: String,
   },
-  adressLine1: {
+  addressLine1: {
     type: String,
   },
   city: {
