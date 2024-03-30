@@ -3,6 +3,7 @@ import cors from "cors";
 import "dotenv/config";
 import { Request, Response } from "express";
 import mongoose from "mongoose";
+import myUserRoute from "./routes/MyUserRoute";
 
 const app = express();
 app.use(cors());
@@ -16,6 +17,8 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
+
+app.use("/api/my/user", myUserRoute);
 
 app.get("/test", async (req: Request, res: Response) => {
   res.send("Hello");
