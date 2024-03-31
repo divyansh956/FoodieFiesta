@@ -12,15 +12,19 @@ const UserSchema = new mongoose.Schema({
   },
   name: {
     type: String,
+    default: "",
   },
   addressLine1: {
     type: String,
+    default: "",
   },
   city: {
     type: String,
+    default: "",
   },
   country: {
     type: String,
+    default: "",
   },
 });
 
