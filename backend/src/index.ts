@@ -21,7 +21,7 @@ mongoose
 app.use("/api/my/user", myUserRoute);
 
 app.get("/health", async (req: Request, res: Response) => {
-  res.send("Server is running...");
+  res.send("Health Ok...");
 });
 
 app.get("/", (req: Request, res: Response) => {
