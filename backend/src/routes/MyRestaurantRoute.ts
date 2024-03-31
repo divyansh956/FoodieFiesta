@@ -14,9 +14,9 @@ const upload = multer({
   },
 });
 
+// TODO: Add validateMyRestaurantRequest middleware
 router.post(
   "/",
-  validateMyRestaurantRequest,
   jwtCheck,
   jwtParse,
   upload.single("imageFile"),
