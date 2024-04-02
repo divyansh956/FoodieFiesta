@@ -24,6 +24,18 @@ const DetailPage = () => {
     return <div>Loading...</div>;
   }
 
+  const removeFromCart = (cartItem: CartItem) => {
+    setCartItems((prevCartItems) =>
+      prevCartItems
+        .map((item) =>
+          item._id === cartItem._id
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  };
+
   const addToCart = (menuItem: MenuItemType) => {
     setCartItems((prevCartItems) => {
       const existingItem = prevCartItems.find(
@@ -69,6 +81,7 @@ const DetailPage = () => {
             <OrderSummary
               restaurant={restaurant}
               cartItems={cartItems}
+              removeFromCart={removeFromCart}
             ></OrderSummary>
           </Card>
         </div>
