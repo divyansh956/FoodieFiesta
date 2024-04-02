@@ -67,7 +67,7 @@ const SearchBar = ({ onSubmit, placeholder, onReset }: Props) => {
           </Button>
         )}
         <Button type="submit" className="bg-orange-500 rounded-full">
-          Serach
+          Search
         </Button>
       </form>
     </Form>
