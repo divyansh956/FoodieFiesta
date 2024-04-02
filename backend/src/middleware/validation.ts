@@ -55,3 +55,11 @@ export const validateMySearchRequest = [
     .notEmpty()
     .withMessage("City parameter is required"),
 ];
+
+export const validateRestaurantIdRequest = [
+  param("restaurantId")
+    .isString()
+    .trim()
+    .notEmpty()
+    .withMessage("RestaurantId parameter is required"),
+];
