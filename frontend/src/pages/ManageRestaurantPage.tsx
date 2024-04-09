@@ -4,7 +4,7 @@ import {
   useGetMyRestaurantOrders,
   useUpdateMyRestaurant,
 } from "@/api/MyRestaurantApi";
-import OrderItemCard from "@/components/OrderItemCard";
+import OrderItemCard from "@/components/ManageRestaurantPage/OrderItemCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ManageRestaurantForm from "@/forms/manage-restaurant-form/ManageRestaurantForm";
 

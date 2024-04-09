@@ -2,10 +2,10 @@ import {
   Pagination,
   PaginationContent,
   PaginationItem,
+  PaginationPrevious,
   PaginationLink,
   PaginationNext,
-  PaginationPrevious,
-} from "./ui/pagination";
+} from "../ui/pagination";
 
 type Props = {
   page: number;
