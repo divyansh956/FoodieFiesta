@@ -10,7 +10,14 @@ import orderRoute from "./routes/OrderRoute";
 import { v2 as cloudinary } from "cloudinary";
 
 const app = express();
-app.use(cors());
+
+const corsOptions = {
+  origin: [process.env.CLIENT_URL as string],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  crendentials: true
+};
+
+app.use(cors(corsOptions));
 app.use("/api/order/checkout/webhook", express.raw({ type: "*/*" }));
 app.use(express.json());
 
